@@ -14,7 +14,7 @@ html {
 :root {
   --background-color: #222;
   --accent-color: royalblue;
-  --font-light: #fff;
+  --font-light: #eee;
   --font-dark: #222;
 }
 
@@ -24,12 +24,15 @@ body {
   background-color: var(--background-color);
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--font-light);
 }
 
 /* Header */
 
 .header {
   background-color: var(--accent-color);
+  position: fixed;
+  width: 100%;
 }
 
 .main-nav {
@@ -51,10 +54,36 @@ body {
   margin: 5px 0;
   padding: 15px 20px;
   border-radius: 5px;
-  color: var(--font-light);
-  font-size: 1.1rem;
+  color: inherit;
+  font-size: 1.2rem;
 }
 
 .main-nav__link:hover {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Section */
+
+.hero {
+  height: 100vh;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.hero__subtitle {
+  margin: 0;
+  max-width: 500px;
+  color: var(--accent-color);
+  font-style: italic;
+  font-size: 1.5rem;
 }
